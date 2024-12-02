@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.neon-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust the height of the bar */
+  background: linear-gradient(
+    90deg,
+    #ea00ff,
+    #4800ff,
+    #d900ff,
+    #6f00ff,
+    #ff00aa
+  ); /* Colors for the neon effect */
+  background-size: 300% 100%; /* Create the color-changing effect */
+  animation: color-shift 4s infinite alternate; /* Smooth color change */
+  filter: blur(0px); /* Blur the edges to blend the bar */
+  z-index: 5; /* Ensure it's behind the text */
+}
+
+/* Animation for the color gradient to move */
+@keyframes color-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
